@@ -5,6 +5,8 @@ import { ContactsModule } from './contacts/contacts.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { UserModule } from './user/user.module';
 import { PhotoModule } from './photo/photo.module';
+import { PostModule } from './post/post.module';
+import { CategoryModule } from './category/category.module';
 
 @Module({
   imports: [
@@ -17,6 +19,8 @@ import { PhotoModule } from './photo/photo.module';
     ContactsModule,
     UserModule,
     PhotoModule,
+    PostModule,
+    CategoryModule,
   ],
   controllers: [AppController],
   providers: [AppService],

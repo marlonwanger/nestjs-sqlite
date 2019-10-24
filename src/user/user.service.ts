@@ -14,6 +14,10 @@ export class UserService {
     return await this.contactRepository.find();
   }
 
+  async findAllPostWithRelations(): Promise<User[]> {
+    return await this.contactRepository.find({ relations: ["posts"] });
+  }
+
   async create(user: User): Promise<User> {
     return await this.contactRepository.save(user);
   }

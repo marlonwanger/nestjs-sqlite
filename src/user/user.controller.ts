@@ -25,6 +25,11 @@ export class UserController {
     return this.userService.create(userData);
   }
 
+  @Get('posts')
+  getAllWithRelations() {
+    return this.userService.findAllPostWithRelations();
+  }
+
   @Put(':id/update')
   async update(@Param('id') id, @Body() userData: User): Promise<any> {
     userData.id = Number(id);
